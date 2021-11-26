@@ -6,7 +6,7 @@
 - Publisher send messages to all subcribers subscribing on that topic
 - Subscribers subscribers to topic by posting to that topic
 
-#### Publisher
+### Publisher
 * List of topics
   * each topic has list of subscribers to that topic
 
@@ -15,7 +15,7 @@
 * DELETE /subscribe
 
 
-#### Subscriber
+### Subscriber
 * List of topics
 
 **Listens to**
