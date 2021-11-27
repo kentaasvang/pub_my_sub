@@ -7,4 +7,13 @@ services:
     volumes:
       - ./nginx.conf/sub.conf:/etc/nginx/conf.d/sub.conf
     ports:
-      - "9092:9090"
+      - "9081:9081"
+  
+  pubnginx:
+    image: "nginx:1.21.4"
+    restart: always
+    volumes:
+      - ./nginx.conf/pub.conf:/etc/nginx/conf.d/pub.conf
+    ports:
+      - "9080:9080"
+
