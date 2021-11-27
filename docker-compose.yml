@@ -8,7 +8,3 @@ services:
       - ./nginx.conf/sub.conf:/etc/nginx/conf.d/sub.conf
     ports:
       - "9092:9090"
-      - "9091:9091"
-#    environment:
-#     - NGINX_HOST
-#     - NGINX_PORT
