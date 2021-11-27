@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  subnginx:
+    image: "nginx:1.21.4"
+    restart: always
+    volumes:
+      - ./nginx.conf/sub.conf:/etc/nginx/conf.d/sub.conf
+    ports:
+      - "9092:9090"
+      - "9091:9091"
+#    environment:
+#     - NGINX_HOST
+#     - NGINX_PORT
