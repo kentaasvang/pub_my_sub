@@ -6,7 +6,8 @@ def application(env, start_response):
 
     topics = {}
 
-    if env["REQUEST_METHOD"] == "POST": uri = env["REQUEST_URI"]
+    if env["REQUEST_METHOD"] == "POST": 
+        uri = env["REQUEST_URI"]
         content_length = int(env["CONTENT_LENGTH"])
         query_string = env["wsgi.input"].read(content_length)
 
@@ -43,7 +44,7 @@ def application(env, start_response):
             yield b"Successfully created topic: %s" % topic
 
     if env["REQUEST_METHOD"] == "GET":
-        test that this works before moving on
+        #test that this works before moving on
         if uri == "/topics":
             topics_json = json.dumps(topics)
             start_response("200 OK", [("Content-Type", "text/json")])
